@@ -64,6 +64,57 @@
 	opacity: 1;
 	visibility: visible;
 	}
+
+</style>
+
+<style>
+	.sliderContainer {
+		position: relative;
+		width: 1080px;
+		height: 700px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.BAimage-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.BAimage-container::before,
+	.BAimage-container::after {
+		content: "";
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.BAimage-container::before {
+		background-image: url("MMBefore.gif");
+	}
+
+	.BAimage-container::after {
+		background-image: url("MMAfter.gif");
+		width: 0;
+	}
+
+	.slider {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 10px;
+		height: 100%;
+		background-color: #000;
+		cursor: ew-resize;
+	}
 </style>
 <html>
 	<head>
@@ -106,9 +157,34 @@
 					<div class="row 900%">
 						<div class="6u 12u$(medium)">
 								<!-- Dominic harris studio -->
-								<h3><strong>Junior Unity Developer - Dominic Harris Studios. </strong></h3>
+								<h3><strong>Junior Unity Developer - Dominic Harris Studios. // (Jan. 2022 – Present) </strong></h3>
 								</head>
 								<body>
+								<p>
+								Junior Unity Developer at "Dominic Harris Studios" working on interactive based visual and backend artworks and pipeline.
+								<br>
+								● Worked on implementing a WebGL/Mobile based unity interactive artwork application on the collaborative
+								<br> 
+								Metamorphosis Unicus project.
+								<br>
+								● R&D on Physics based cloth simulation on unity and unreal engine based projects
+								<br>
+								● Creating, maintaining, and improving pipelines and workflows in collaboration with the project lead.
+								<br>
+								● R&D using artificial intelligence to develop a pipline to create unique procedurally generated graphics for Physical and 
+								<br>
+								canvas based artwork.
+								<br>
+								● Creating proof of concept tools for quickly executing tests.
+								<br>
+								● Working with the wider team to create full spec production workflows and tools..
+								<br>
+								● Collaborating with developers, 3D artists and animators to execute innovative and beautiful Artworks.
+								<br>
+								● Designing and implementing system designs with unique technical problems not common in the real-time industry
+								<br>
+								● Building and help develop UE4/UE5 procedural artwork using blueprints and the Niagara system.
+								</p>
 								<div class="image-container">
 									<img src="images/unseen.jpg" data-dropdown="dropdown1">
 								</div>
@@ -183,17 +259,60 @@
 
 								<div class="dropdown-container">
 									<div class="dropdown-menu" id="dropdown5">
-									<h3><strong>"Metamorphosis Unico"</strong></h3>
+									<h3><strong>"Metamorphosis Unicus"</strong></h3>
 									<div class="dropdown-divider"></div>
-									<p>Quisque feugiat sagittis urna, sed sagittis arcu convallis non. Mauris vitae sollicitudin justo. Donec varius, ligula ut feugiat posuere, dolor enim vehicula elit, eget varius nisi purus id erat. Nullam feugiat orci et est tincidunt, at gravida nibh egestas.</p>
+									<p>Collaborated with handful of local primary schools to engage with young students to create digital butterfly artworks.
+										<br>
+										Each students' drawings were passed through scans and then through multiple python scripts and OpenCV vision librarys to extract raw drawings as ready to be used textures.
+										<br>
+										•Lead Development for a WebGL/Mobile interactive artwork using Unity for the collaborative Metamorphosis Unicus project.
+										<br>
+										•The Unity project consisted of a self built AI waypoint navigation system for the butterfly skeleton mesh to manivor around and fly from differnt positions depending on which platform the WebGL artwork is being displayed on.
+										This ensures that no matter the screen size the butterflies that fly around will always stay relatively on screen however each will have different flight patterns.
+										<br>
+										•use of firebase to act as the WebGL backend so depending on the URL last number identifer, that will then download and paint the butterfly texture in the WebGL application using the URL identifer to represent the specific texture ID.
+										This is to allow us to use 1 Unity WebGL application for the whole dataset of unique texture identifiers.
+										<br>
+										The following full collection of WebGL artworks can be found <a href="https://www.dominicharris.com/artworkpages/collaborative-butterfly-gallery" target="_blank">"here"</a>
+									</p>
 									<img src="images/unico32.png" width="512" height="600">
+									<img src="images/unicus1.jpeg" width="512" height="600">
 									</div>
 								</div>
 								<!-- Add more dropdown containers as needed -->
 
-								<h3><strong>Technical Artist Intern - Fireslug Studios. </strong></h3>
+							<h3><strong>Technical Artist Intern - Fireslug Studios. // (May. 2021 – December 2021) </strong></h3>
 							</head>
 							<body>
+								<p>
+								Technical Artist at FireSlug studios which is a start-up game company based in London,UK. working on the new 
+								<br>
+								IP "Ashborn" which is a 3D RPG dungeon crawler with team swap mechanics. Since joining the team,
+								<br> 
+								I have been apart of building the combat beta release and have contributed to weekly updates/bug fixes.
+								<br>
+								● Development Lighting overhaul – Created a lighting system to set the mood to the game and added particle 
+								<br>
+								effects to interactable objects.
+								<br>
+								● Fixing shading bugs on emissions and shaders to fit new lighting system.
+								<br>
+								● Collaborating with Artists, creative directors, and technical engineers through a handful of meetings per week
+								<br> 
+								to ensure workload is being handled correctly for promotional launch.
+								<br>
+								● C# scripting for main menu navigation, gameplay, development, and animation sequences.
+								<br>
+								● Terrain bug fixes
+								<br>
+								● Worked on the initial combat build for beta release
+								<br>
+								● Implementation of a main menu credits page with UI design and creation
+								<br>
+								● Controller input Implementation for Title screen
+								<br>
+								● Health UI system overhaul
+								</p>
 							<div class="image-container">
 								<img src="images/fs.gif" data-dropdown="dropdown6">
 							</div>
@@ -206,12 +325,174 @@
 
 							<div class="dropdown-container">
 								<div class="dropdown-menu" id="dropdown6">
-								<h3><strong>Project Ashborn</strong></h3>
+								<h3><strong>Project Ashborn - (May. 2021 – December 2021)</strong></h3>
 								<div class="dropdown-divider"></div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque dui ut neque finibus, sit amet sollicitudin arcu laoreet. Sed at ante vitae ex bibendum viverra sed sit amet urna. Curabitur fringilla nibh ac nulla volutpat, sit amet tempus felis tristique.</p>
+								<p>•Led the development of lighting systems and particle effects, significantly enhancing game atmosphere and visual quality.
+									<br>
+									•	Fixed shading bugs on character emissions, ensuring high-quality rendering.
+									<br>
+									•	Collaborated with artists, creative directors, and technical engineers to ensure efficient project execution.
+									<br>
+									•	Utilized advanced C# scripting for main menu navigation, gameplay mechanics, and animation sequences.
+									<br>
+									•	Optimized UI and post-processing stack to improve overall performance and user experience.
+									<br>
+									•	Managed combat beta releases, implementing regular fixes and visual updates to ensure polished gameplay.
+									<br>
+									•	Led the overhaul of the health system UI to match specifications and concept designs, showcasing UI design and implementation skills.
+									</p>
 								<i><img src="images/fs.gif" width="1024" height="600"></i>
 								<i><img src="images/fs1.png" width="1024" height="700"></i>
 								</div>
+							</div>
+							
+							<h3><strong>Together We Survive - (Retro First person Zombie Survival)</strong></h3>
+							</head>
+							<body>
+							<div class="image-container">
+								<img src="images/together we survive gif.gif" data-dropdown="dropdown7">
+							</div>
+							<div class="image-container">
+								<img src="images/Press Release 4.png" data-dropdown="dropdown7">
+							</div>
+							<div class="dropdown-container">
+								<div class="dropdown-menu" id="dropdown7">
+								<h3><strong>Together We Survive - (Retro First person Zombie Survival)</strong></h3>
+								<div class="dropdown-divider"></div>
+								<p> Together We Survive is a retro first person zombie shooter that was developed in a two person team within a 3 month period for a masters game development module.
+									<br>
+									Roles consisted of:
+									<br>
+									● Visual art direction - (PSX style graphics, Lighting & post processing, UI implementation, particle system - VFX)
+									<br>
+									● implementing core gameplay mechanics
+									<br>
+									● Animation of weapon handling (Shooting, reload, pull-out animations)
+									<br>
+									● 3D modelling of all weapons & attachments (Pistol, Shotgun, Rifle, Baseball Bat, laser sight, flashlight)
+									<br>
+									● Optimisations - (occlusion culling, GPU instancing, downgrading texture sizes, LOD groups, static batching)
+									<br>
+									● Audio design and implementation 
+									<br>
+								</p>
+								<p>
+									Plans to release Together We Survive onto Itch.io in the upcoming weeks.
+								</p>
+								<i><img src="images/together we survive gif.gif" width="1024" height="600"></i>
+								<i><img src="images/Press Release 4.png" width="1024" height="700"></i>
+								<i><img src="images/Press Release 2.png" width="1024" height="700"></i>
+								<i><img src="images/Gameplay_5.png" width="1024" height="700"></i>
+								</div>
+							</div>
+
+							<h3><strong>Actions Have Consequences (2D Platformer)</strong></h3>
+							</head>
+							<body>
+							<div class="image-container">
+								<img src="images/actions.png" data-dropdown="dropdown8">
+							</div>
+							<div class="image-container">
+								<img src="images/title.png" data-dropdown="dropdown8">
+							</div>
+							<div class="dropdown-container">
+								<div class="dropdown-menu" id="dropdown8">
+								<h3><strong>Actions have consequences - Unity</strong></h3>
+								<div class="dropdown-divider"></div>
+								<p> Actions have consequences is a <b>published</b> 2D platformer solo developed for my MA game development module in which was assigned to create a game for a Game Jam within <b>2 weeks</b>
+								</p>
+								<p>
+									Since the <b>release (April 2021)</b> onto Itch.io which can be found <a href ="https://canberksahin97.itch.io/actions-have-consequences"><b>here</b></a>, it has amassed over <b>1400+ downloads</b> which lead me to make plans of releasing regular updates to support the player-base & demand.
+								</p>
+									<p>
+								</p>
+								<span class="image fit"><img src="images/actions.png" alt="" /></span>
+								<span class="image fit"><img src="images/ahc gif.gif" alt="" /></span>
+									<ul class="icons">
+										<li><a href="https://canberksahin97.itch.io/actions-have-consequences" class="icon fa-itchio"><span class="align-center"> Itch.io Project Link</span></a></li>
+										</ul>
+								</div>
+							</div>
+
+						<h3><strong>Manuki Motu</strong></h3>
+						</head>
+						<body>
+						<div class="image-container">
+							<img src="images/motu1.jpg" data-dropdown="dropdown9">
+						</div>
+						<div class="image-container">
+							<img src="images/motu2.jpg" data-dropdown="dropdown9">
+						</div>
+						<div class="dropdown-container">
+							<div class="dropdown-menu" id="dropdown9">
+							<h3><strong>Manuki Motu - Unity</strong></h3>
+							<div class="dropdown-divider"></div>
+							<p> <b>"Manuki Motu" </b> is a 3D first person exploration puzzle game based on the <b>accessibility</b> and a challenge set within the group to create a game with <b>no UI.</b> theme set for the falmouth MA masters co-hort. Development was limited to 12 weeks of working within a remote group.
+							</p>
+							<p>
+								Planning to release "Manuki Motu" in a handful of weeks with full accessbility support.
+							</p>
+							<span class="image fit"><img src="images/motu1.jpg" alt="" /></span>
+							<span class="image fit"><script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script></span>
+								<div class="elfsight-app-398be9ef-d004-4940-81c7-20c15062644b"></div>
+							<span class="image fit"><img src="images/motu2.jpg" alt="" /></span>
+								<ul class="icons">
+									<li><a href="https://canberksahin97.itch.io/actions-have-consequences" class="icon fa-itchio"><span class="align-center"> Itch.io Project Link</span></a></li>
+									</ul>
+							</div>
+						</div>
+
+						<h3><strong>Forgotten Memories</strong></h3>
+					</head>
+					<body>
+					<div class="image-container">
+						<img src="images/forgotten1.png" data-dropdown="dropdown10">
+					</div>
+					<div class="image-container">
+						<img src="images/forgotten2.jpg" data-dropdown="dropdown10">
+					</div>
+					<div class="dropdown-container">
+						<div class="dropdown-menu" id="dropdown10">
+						<h3><strong>Forgotten Memories - Unity</strong></h3>
+						<div class="dropdown-divider"></div>
+						<p> 
+							Forgotten Memories is a work in progress, however it is a 3D adventure/exploration - narrative game that is developed and designed from scratch in Unity Game engine. The whole premise of the narrative is trying to regain aspects of memory to help you navigate your way through intricate puzzles after suffering a life changing car crash.
+						</p>
+						<span class="image fit"><img src="images/forgotten1.png" alt="" /></span>
+						<span class="image fit"><img src="images/fmcrash.png" alt="" /></span>
+						<span class="image fit"><img src="images/fmchurch.png" alt="" /></span>
+						<span class="image fit"><img src="images/forgotten2.jpg" alt="" /></span>
+							<ul class="icons">
+								<li><a href="https://canberksahin97.itch.io/actions-have-consequences" class="icon fa-itchio"><span class="align-center"> Itch.io Project Link</span></a></li>
+								</ul>
+						</div>
+					</div>
+					
+					<h3><strong>Urban Wards</strong></h3>
+				</head>
+				<body>
+				<div class="image-container">
+					<img src="images/level 2.png" data-dropdown="dropdown11">
+				</div>
+				<div class="image-container">
+					<img src="images/level end.png" data-dropdown="dropdown11">
+				</div>
+				<div class="dropdown-container">
+					<div class="dropdown-menu" id="dropdown11">
+					<h3><strong>Urban Wards - Serious Hazard Perception Application</strong></h3>
+					<div class="dropdown-divider"></div>
+					<p>Urban Wards is a 3D serious hazard perception game developed for my University final year project. The game consists of 3 levels ranging from day time to different urban environments.
+						The video game was developed with the target audience in mind which is primarily for Older adults. No prior knowledge of Unity or C# before undertaking project including the writing of the dissertation which all was completed and played-through in 6 months.
+					<br>
+
+					<b>Project was awarded 90+ (A+) and was recognised as an academic success with potential ability to have it published at an international level.</b>
+					</p>
+					<span class="image fit"><img src="images/level 2.png" alt="" /></span>
+					<span class="image fit"><img src="images/level 1_2.png" alt="" /></span>
+					<span class="image fit"><img src="images/level 2_2.png" alt="" /></span>
+					<span class="image fit"><img src="images/level end.png" alt="" /></span>
+					</div>
+				</div>
 							
 
 								<script>
@@ -230,11 +511,50 @@
 										});
 
 										dropdownMenu.classList.toggle('show');
+
+										// Scroll the page back to the top
+										window.scrollTo({ top: 0, behavior: 'smooth' });
 									});
 									});
 								</script>
-								</body>
-								</html>
+								<script>
+									const container = document.querySelector('.sliderContainer');
+									const slider = document.querySelector('.slider');
+									const imageContainer = document.querySelector('.BAimage-container');
+							
+									let isDown = false;
+									let startX;
+									let initialWidth;
+							
+									slider.addEventListener('mousedown', (e) => {
+										isDown = true;
+										startX = e.pageX - slider.offsetLeft;
+										initialWidth = imageContainer.offsetWidth;
+									});
+							
+									slider.addEventListener('mouseleave', () => {
+										isDown = false;
+									});
+							
+									slider.addEventListener('mouseup', () => {
+										isDown = false;
+									});
+							
+									slider.addEventListener('mousemove', (e) => {
+										if (!isDown) return;
+										e.preventDefault();
+										const x = e.pageX - slider.offsetLeft;
+										const walk = x - startX;
+										const newWidth = initialWidth + walk;
+										const containerWidth = container.offsetWidth;
+							
+										if (newWidth >= 0 && newWidth <= containerWidth) {
+											imageContainer.style.width = `${newWidth}px`;
+										}
+									});
+								</script>
+			</body>
+		</html>
 
 	</body>
 </html>
