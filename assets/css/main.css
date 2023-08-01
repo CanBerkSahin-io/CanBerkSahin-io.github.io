@@ -65,8 +65,8 @@
 
 	.container.\31 25\25 {
 		width: 100%;
-		max-width: 100rem;
-		min-width: 80rem;
+		max-width: 80rem;
+		min-width: 20rem;
 	}
 
 	.container.\37 5\25 {
@@ -82,7 +82,7 @@
 	}
 
 	.container {
-		width: 140rem;
+		width: 100rem;
 	}
 
 	@media screen and (max-width: 1680px) {
@@ -1903,17 +1903,7 @@ h1,p {
 	height: 185px;
 	margin: 50px auto;
 }
-.pic:hover img {
--webkit-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
--webkit-filter: blur(2px);
--moz-filter: blur(2px);
--ms-filter: blur(2px);
--o-filter: blur(2px);
-filter: blur(2px);
-transform: scale(1.08);
-}
+
 .imgtext:hover {
 	-webkit-opacity: 40;
 	opacity: 40;
@@ -3612,11 +3602,6 @@ transform: scale(1.08);
 			filter: blur(0);
 			transition: filter 0.8s ease-in-out;
 		}
-		.gallery:hover .image {
-			transition: visibility 1s ease-in-out;
-			filter: blur(1.2px);
-			visibility: visible;
-		}
 		.text {
 			visibility: hidden;
 		}
@@ -4343,7 +4328,7 @@ transform: scale(1.08);
 		padding: 3rem 0 2rem 0 ;
 	}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 100px) {
 
 			#main {
 				padding: 3rem 0 1rem 0 ;
