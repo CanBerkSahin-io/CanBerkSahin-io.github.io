@@ -1820,6 +1820,11 @@
 			size: 100px;
 			border-radius: 50%;
 		}
+		.box .image.big{
+			margin: 1px;;
+			size: 300px;
+			border-radius: 50%;
+		}
 
 			.box .image.fit img {
 				border-radius: 0;
