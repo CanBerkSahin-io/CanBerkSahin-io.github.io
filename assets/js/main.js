@@ -110,6 +110,34 @@ var settings = {
 
 	};
 
+	document.addEventListener('DOMContentLoaded', (event) => {
+		const images = document.querySelectorAll('.clickable-image');
+		images.forEach(image => {
+			image.addEventListener('click', () => {
+				const dropdownId = image.getAttribute('data-dropdown');
+				const modal = document.getElementById(dropdownId);
+				modal.style.display = 'flex';
+			});
+		});
+	
+		const closeButtons = document.querySelectorAll('.close');
+		closeButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const modal = button.closest('.modal');
+				modal.style.display = 'none';
+			});
+		});
+	
+		window.addEventListener('click', (event) => {
+			const modals = document.querySelectorAll('.modal');
+			modals.forEach(modal => {
+				if (event.target == modal) {
+					modal.style.display = 'none';
+				}
+			});
+		});
+	});
+
 	/**
 	 * Custom banner slider for Slate.
 	 * @return {jQuery} jQuery object.
