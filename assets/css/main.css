@@ -2237,6 +2237,8 @@ h1,p {
 		input[type="radio"]:checked + label:before {
 			content: '\f00c';
 		}
+	
+
 
 	input[type="checkbox"] + label:before {
 		border-radius: 2px;
