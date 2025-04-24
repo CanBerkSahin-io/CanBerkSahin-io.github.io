@@ -2441,7 +2441,7 @@ h1,p {
 	}
 
 		ul li {
-			padding-left: 0.5rem;
+			padding-left: 100rem;
 		}
 
 		ul.alt {
@@ -4053,7 +4053,7 @@ h1,p {
 		@media screen and (max-width: 736px) {
 
 			#menu {
-				padding: 2.5rem 1.75rem;
+				padding: 3rem 1.75rem;
 			}
 
 		}
