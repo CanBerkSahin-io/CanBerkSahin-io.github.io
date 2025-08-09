@@ -35,10 +35,10 @@
     <h4>Dominic Harris Studios</h4>
     <p>Led the development of "Unseen," a real-time interactive installation utilizing AI-driven generative systems and Unreal Engine 4 (Blueprints) to render over 13,500 dynamic butterflies. Engineered a Python-based backend to algorithmically generate and display triadic color palettes and implement an adaptive color matching system based on advanced color theory principles. Recognized by NVIDIA for technical innovation in AI and real-time graphics.</p>
     <a href="javascript:void(0);" class="cta-button"
-       onclick="openProjectModal(['images/unseen.jpg', 'images/unseen1.jpg', 'images/unseen3.jpg'], 'Unseen', 'Dominic Harris Studios', `Real-time AI generative installation built in UE4. Python backend controls 13,500 butterflies with adaptive color theory logic.`)">View Project</a>
+       onclick="openProjectModal(['images/unseenexpo.webp', 'images/unseen.jpg','images/unseenexpo2.webp'], 'Unseen', 'Dominic Harris Studios', `Real-time AI generative installation built in UE4. Python backend controls 13,500 butterflies with adaptive color theory logic.`)">View Project</a>
   </div>
   <div class="featured-image">
-    <img src="images/unseen.jpg" alt="Unseen Project">
+    <img src="images/unseenexpo.webp" alt="Unseen Project">
   </div>
 </div>
 
@@ -69,25 +69,38 @@
       </div>
     </div>
     
-    <div class="project-card">
-      <img src="images/SW.png" alt="Snow White Immersive Experience">
-      <div class="project-info">
-        <h3>Snow White Immersive Experience</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Gesture-based interactive storytelling using Unity and Kinect Azure to trigger character r...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/SW.png'], 'Snow White Immersive Experience', 'Dominic Harris Studios', `Gesture-based interactive storytelling using Unity and Kinect Azure to trigger character responses in real time.`)">View Project</a>
-      </div>
-    </div>
+<div class="project-card">
+  <img src="images/SW.png" alt="Snow White Immersive Experience">
+  <div class="project-info">
+    <h3>Snow White Immersive Experience</h3>
+    <h5>Dominic Harris Studios</h5>
+    <p>Gesture-based interactive storytelling using Unity and Kinect Azure to trigger character responses in real time.</p>
+    <a href="javascript:void(0);" class="cta-button small"
+       onclick="openProjectModal(
+         ['images/SW.png'],
+         'Snow White Immersive Experience',
+         'Dominic Harris Studios',
+         `Snow White & 7 Dwarfs Immersive (SW7D) is an upscaled and more ambitious project of its predecessor, which was displayed on a 33 Windows platform single network screens
+         <br><br>
+          <p>The immersive version was built solely in Unity on top of the outdated Unity 5x engine version and upgraded to Unity 2022 to utilise all the new possible features of the Universal Render Pipeline.</p>
+          <br><br>
+          <p>SW7D uses real-time gesture recognition tracking through Kinect Azures placed around the immersive space. Incoming Skeleton Data based on real world coordinates are then evaluated under certain conditions which equate to certain Gestures. Once Gestures are recognised we play corresponding animations depending on whether you are facing that specific character or not. A late feature addition also includes a Hokuyo laser which detects touch points and sends them via UDP messages into Unity, which then translates them into world space to accurately mimic a touch based on which area of the immersive space you are touching.</p>
+          <br><br>
+          <p>The Unity output was designed in a modular way to fit any immersive space if needed and adjusted on site. The video output that displays the characters uses a spout sender from each character camera and then is sent over to Light Act, which stitches the content of the characters together and displays them to video projector outputs.</p>
+          <br><br>
+          <p>This Immersive Artwork has been displayed at Halcyon Gallery during the Feeding Consciousness exhibition in Mayfair, London. Along with Galleries in NYC + Washington Under Halcyon Gallery</p>`
+       )">View Project</a>
+  </div>
+</div>
     
     <div class="project-card">
       <img src="images/Spectrum Immersive.png" alt="Spectrums Immersive Experience">
       <div class="project-info">
         <h3>Spectrums Immersive Experience</h3>
         <h5>Dominic Harris Studios</h5>
-        <p>UE5-based installation using Hokuyo laser range finders and nDisplay cluster for spatial t...</p>
+        <p>UE5-based Immersive Artwork Utilising Multi-Ndisplay Clients with Cluster Network Messages.</p>
         <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/Spectrum Immersive.png'], 'Spectrums Immersive Experience', 'Dominic Harris Studios', `UE5-based installation using Hokuyo laser range finders and nDisplay cluster for spatial tracking.`)">View Project</a>
+           onclick="openProjectModal(['images/Spectrum Immersive.png', 'images/dhs_spectrum.jpg', 'images/dhs_spectrum2.jpg'], 'Spectrums Immersive Experience', 'Dominic Harris Studios', `UE5-based 3 client Ndisplay installation using Hokuyo/Sick laser range finders and Ndisplay Cluster messages for networking between each Ndisplay Clients. Immersive Installation premiered London Flagship Haclyon Gallery along with installations in NYC + Washington Galleries. More information about the Immersive Artwork can be found directly on Dominic Harris' Website`)">View Project</a>
       </div>
     </div>
     
@@ -164,7 +177,7 @@
         <h5>University Project</h5>
         <p>Atmospheric narrative Unity game. Designed environments and interactions for exploration-b...</p>
         <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/forgotten1.png'], 'Forgotten Memories', 'University Project', `Atmospheric narrative Unity game. Designed environments and interactions for exploration-based story.`)">View Project</a>
+           onclick="openProjectModal(['images/forgotten1.png','images/forgotten2.jpg','images/fmcrash.png','images/fmchurch.png'], 'Forgotten Memories', 'University Project', `Atmospheric narrative Unity game. Designed environments and interactions for exploration-based story.`)">View Project</a>
       </div>
     </div>
     
@@ -225,7 +238,7 @@
     
         document.getElementById("modalTitle").textContent = title;
         document.getElementById("modalSubTitle").textContent = subtitle;
-        document.getElementById("modalText").textContent = description;
+        document.getElementById("modalText").innerHTML = description;
         document.getElementById("projectModal").style.display = "block";
         updateSlides();
       }
