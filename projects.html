@@ -35,7 +35,17 @@
     <h4>Dominic Harris Studios</h4>
     <p>Led the development of "Unseen," a real-time interactive installation utilizing AI-driven generative systems and Unreal Engine 4 (Blueprints) to render over 13,500 dynamic butterflies. Engineered a Python-based backend to algorithmically generate and display triadic color palettes and implement an adaptive color matching system based on advanced color theory principles. Recognized by NVIDIA for technical innovation in AI and real-time graphics.</p>
     <a href="javascript:void(0);" class="cta-button"
-       onclick="openProjectModal(['images/unseenexpo.webp', 'images/unseen.jpg','images/unseenexpo2.webp'], 'Unseen', 'Dominic Harris Studios', `Real-time AI generative installation built in UE4. Python backend controls 13,500 butterflies with adaptive color theory logic.`)">View Project</a>
+       onclick="openProjectModal(['images/unseenexpo.webp', 'images/unseen.jpg','images/unseenexpo2.webp'], 'Unseen', 'Dominic Harris Studios',
+       `Real-time AI generative installation built in UE4 then later upgraded to UE5. Python backend controls 13,500 butterflies with adaptive color theory logic which geneates Colourful random Multi-colour Gradients.
+         <br><br>
+          <p>Led the technical development of Unseen under guidance and collaboration from rest of the team, an interactive digital installation showcasing 13,500+ AI-generated butterfly species created from global natural history museum datasets. Oversaw the project from concept phase to final deployment, currently exhibited at Halcyon Gallery, New Bond Street, London.</p>
+          <br><br>
+          <p>Real-Time Interactive System (UE4): Architected and implemented a high-performance Unreal Engine 4 Blueprint framework for dynamic asset composition, enabling smooth rendering and interaction with thousands of unique butterfly assets at exhibition scale.</p>
+          <br><br>
+          <p>Python Backend Services: Developed a custom Python backend to generate triadic colour palettes, perform automated colour matching against provided butterflies, and transmit palette data to UE4 in real time.</p>
+          <br><br>
+          <p>Optimized Application: Designed an asset streaming to efficiently manage the large butterfly dataset without impacting performance and dynamically loading hundreds of unique assets as needed on different platform requirements</p>`
+       )">View Project</a>
   </div>
   <div class="featured-image">
     <img src="images/unseenexpo.webp" alt="Unseen Project">
@@ -46,6 +56,36 @@
 <section class="projects-section">
   <h2 class="other-projects-title">Other Projects</h2>
   <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="images/sw_7d.webp" alt="Snow White & 7 Dwarfs">
+      <div class="project-info">
+        <h3>Snow White & 7 Dwarfs</h3>
+        <h5>Dominic Harris Studios</h5>
+        <p>Lead Developer on Snow White & 7 Dwarfs Artwork, Upgraded backend and visual look for different platform and camera use for SK Tracking</p>
+       <a href="javascript:void(0);" class="cta-button small"
+        onclick="openProjectModal(
+          ['images/sw_7d.webp', 'images/sw_7d2.webp'],
+          'Snow White & 7 Dwarfs',
+          'Dominic Harris Studios',
+          `<p>Lead Developer on Snow White & 7 Dwarfs Artwork, Upgraded backend and visual look for different platform and camera use for SK Tracking.</p>
+          <br><br>
+          <p>The Ambition of the project was to give it a massive upgrade in visual fidelity and performance, ensuring a seamless experience across new generations of hardware.</p>
+          <p>The 2013 version of the project served as a foundation, and this upgrade aimed to enhance every aspect, from asset quality to rendering techniques to SK Tracking and cameras being used.</p>
+          <br><br>
+          <p>I stripped out the Kinect2 support and re-implemented the tracking system using a Real Sense camera and our in-house built/trained Yolo SK tracking Model which UDP piped in gesture data which improved the overall tracking accuracy and responsiveness and removed the Kinect2 dependency as those cameras have been made redundant.</p>
+          <p>Additionally, I worked on enhancing the visual fidelity of the project by upgrading the asset quality and manual cleanup of Normal maps and textures. With the use of a 1080P camera, we were able to achieve a significant boost in Reflection detail and clarity.</p>
+          <br><br>
+          <p>Moreover, I implemented a new lighting system that took advantage of the latest rendering techniques, further improving the overall visual quality.</p>
+          <br><br>
+          <p>Finally, I created a comprehensive testing suite to ensure the stability and performance of the project across all supported hardware.</p>
+          <video controls style='width:100%;margin-top:1em;'>
+              <source src='images/sw_dev.mp4' type='video/mp4'>
+              Your browser does not support the video tag.
+            </video>`
+        )">View Project</a>
+      </div>
+    </div>
 
     <div class="project-card">
       <img src="images/metamorphosis_optimized_visual.png" alt="Optimizing Metamorphosis Collection">
@@ -63,9 +103,15 @@
       <div class="project-info">
         <h3>Seasons</h3>
         <h5>Dominic Harris Studios</h5>
-        <p>Unity-based generative art installation using gesture/sound tracking, seasonal transitions...</p>
+        <p>Unreal Engine-based artwork featuring dynamic seasonal transitions built on top of the metamorphosis Project.</p>
         <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/seasons.jpg'], 'Seasons', 'Dominic Harris Studios', `Unity-based generative art installation using gesture/sound tracking, seasonal transitions and custom effects.`)">View Project</a>
+           onclick="openProjectModal(['images/seasons.jpg'], 'Seasons', 'Dominic Harris Studios', 
+           `<p>Unreal Engine-based artwork featuring dynamic seasonal transitions built on top of the metamorphosis Project.</p>
+            <br><br>
+            <p>The Brief of the Project was to Upgrade the metamorphosis project to include more butterfly actors whilst maintaining performance and visual fidelity.</p>
+            <p>Additionally, I implemented a new lighting system that took advantage of the latest rendering techniques, further improving the overall visual quality.</p>
+            <p>This project was built and optimised for Linux Orin using LinuxAArch64 Architecture.</p>
+           `)">View Project</a>
       </div>
     </div>
     
