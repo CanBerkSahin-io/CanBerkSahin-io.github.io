@@ -1,132 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can Berk Sahin | Game Developer</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Optional: Poppins font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Can Berk Sahin — Software developer working across interactive systems, real-time applications, optimisation and immersive installations.">
+  <title>Can Berk Sahin | Unity & Unreal Engine Developer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="logo">Can Berk Sahin</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- Hero Text -->
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Can Berk Sahin</span></h1>
-            <h2>Creative Developer</h2>
-            <p>Building immersive worlds one pixel at a time.</p>
-            <a href="#projects" class="cta-button">See My Projects</a>
-        </div>
-    </header>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Computer Science MA/BSc graduate from Falmouth & Brunel University , Currently working as a Creative Developer at Dominic Harris studios developing complex interactive visual and backend based real time artworks and Immersive Projects.
-
-			As for side projects, I have published a 2D platformer title onto Itch.io which has amassed over 1700 downloads since April 2021.
-			
-			I have programming experience in languages such as Java, C#, R, SQL, Python and HTML. Have been awarded an Academic excellence scholarship throughout my time at my undergraduate studies from the Physical sciences college. Having also been awarded an A+ (First) in my final year dissertation project, which is the design and implementation of a 3D serious Video game within Unity (C#) to simulate hazard perception in an urban environment for older adults.
-			
-			I also have certifications in Information Technology/Computing at City and Islington College, A Level 2 BTEC Computing certification with a double Distinction grade being the highest grade possible. Not to mention also have a Level 3 extended Diploma BTEC certification in Information technology with the grade Distinction*Distinction*Distinction.</p>
-    </section>
-
-    <!-- PROJECTS GALLERY SECTION -->
-<section id="projects" class="projects-section">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <a href="projects.html" class="project-card">
-            <img src="images/unseen1.jpg" alt="Unseen Project">
-            <div class="project-info">
-                <h3>Unseen</h3>
-                <p>Real-time AI butterfly artwork using Unreal Engine 4/5.</p>
-            </div>
-        </a>
-
-        <!-- Project 2 -->
-        <a href="projects.html" class="project-card">
-            <img src="images/SW.png" alt="Snow White Immersive Experience">
-            <div class="project-info">
-                <h3>Snow White Immersive Experience</h3>
-                <p>Gesture-based interactive storytelling using Unity & Kinect Azure.</p>
-            </div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="projects.html" class="project-card">
-            <img src="images/Press Release 4.png" alt="Together We Survive">
-            <div class="project-info">
-                <h3>Together We Survive</h3>
-                <p>Retro First person Zombie Survival</p>
-            </div>
-        </a>
-
-        <!-- Project 4 -->
-        <a href="projects.html" class="project-card">
-            <img src="images/motu1.jpg" alt="Manuku Motu">
-            <div class="project-info">
-                <h3>Manuku Motu</h3>
-                <p>First person exploration puzzle game based on the accessibility and a challenge set within the group to create a game with no UI</p>
-            </div>
-        </a>
-
-        <!-- Project 5 -->
-        <a href="projects.html" class="project-card">
-            <img src="images/forgotten1.png" alt="Forgotten Memories">
-            <div class="project-info">
-                <h3>Forgotten Memories</h3>
-                <p>3D adventure/exploration - narrative game</p>
-            </div>
-        </a>
-
-        <!-- Project 6 -->
-        <a href="projects.html" class="project-card">
-            <img src="images/actions.png" alt="Actions have consequences">
-            <div class="project-info">
-                <h3>Actions have consequences</h3>
-                <p>Published 2D platformer for a Game Jam with over 1500 downloads</p>
-            </div>
-        </a>
-
+  <header class="hero">
+    <canvas class="hero-response-field" id="heroResponseField" aria-hidden="true"></canvas>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Can Berk Sahin</a>
+      <ul class="nav-links">
+        <li><a href="#technical-showcase">Technical focus</a></li><li><a href="projects.html">Projects</a></li><li><a href="resume.html">Experience</a></li><li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content hero-content--focused">
+      <p class="eyebrow">London, UK</p>
+      <h1>Software<br><span>Developer</span></h1>
+      <h2>Interactive systems, real-time applications &amp; immersive installations</h2>
+      <p>I build and ship interactive experiences across Unity and Unreal Engine—from live installations to interactive applications.</p>
+      <div class="credibility-strip" aria-label="Professional highlights"><span>4+ years’ experience</span><span>Unity &amp; Unreal Engine</span><span>Performance &amp; deployment</span></div>
+      <div class="hero-actions"><a href="projects.html" class="cta-button">Explore projects</a><a href="resume.html" class="text-button">View experience →</a></div>
+      <a class="hero-case-study" href="unseen.html" aria-label="Read the Unseen case study">
+        <span class="hero-case-study__eyebrow">Featured case study</span>
+        <strong>Unseen</strong>
+        <span class="hero-case-study__summary">Interactive systems, performance refinement &amp; exhibition delivery</span>
+        <span class="hero-case-study__arrow" aria-hidden="true">→</span>
+      </a>
     </div>
-</section>
-
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Want to collaborate or have a question? Reach out!</p>
-        <p>Email: <a href="mailto:canberksahin97@gmail.com" style="color: #00c3ff;">canberksahin97@gmail.com</a></p>
+  </header>
+  <main>
+    <section id="about" class="section section--narrow">
+      <p class="eyebrow">Profile</p><h2>Engineering real-time work that survives the real world.</h2>
+      <p>I'm a Creative Developer at Dominic Harris Studio with more than four years of professional Unity and Unreal Engine experience. My work spans interactive applications, real-time graphics, sensor-led systems, technical R&amp;D, deployment tooling and the long-term operation of installed artworks.</p>
+      <p>My work has been exhibited internationally, including at Halcyon Gallery locations in London, New York and Washington. I move between feature development, profiling, systems integration, platform support and live technical problem-solving—building reliable software for both creative concepts and the hardware that runs them.</p>
     </section>
+    <section class="technical-showcase" id="technical-showcase">
+      <div class="technical-showcase__intro">
+        <p class="eyebrow">Technical showcase</p>
+        <h2>Procedural Content Generation for 3D Game Environments</h2>
+        <p>Master’s major project, Falmouth University. A Unity 2021.3 project exploring procedural terrain-chunk generation with Perlin noise and material-aware placement of vegetation, forests, points of interest and story-progress items.</p>
+        <div class="technical-showcase__meta"><span>Unity 2021.3</span><span>C#</span><span>Procedural generation</span><span>Perlin noise</span></div>
+        <a class="text-button" href="https://github.com/CanBerkSahin-io/Procedural_Content_Generation" target="_blank" rel="noopener">View source on GitHub →</a>
+      </div>
+      <div class="pcg-gallery" aria-label="Procedural Content Generation project screenshots">
+        <img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/d9f794c3-396d-4fd1-9441-929fc2e14c67" alt="Procedural Content Generation project overview">
+        <img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/6c6cad31-b30c-49b0-9af9-3f9df442ed64" alt="Procedural environment in Unity">
+        <img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/4b269e7c-d9b9-430b-a7c2-a7d3757ba176" alt="Procedural Content Generation development view">
+        <img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/8d312c94-f1a0-47cc-b012-cd56abe5cb1a" alt="Procedural Content Generation project screenshot">
+        <img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/598bf438-0fa3-40ec-99bf-ddb1c8bd8383" alt="Procedural Content Generation project screenshot">
+        <img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/326f74c1-23fd-490f-aee5-6b2a096cc660" alt="Procedural Content Generation project screenshot">
+      </div>
+      <div class="technical-evidence" aria-label="Technical case study summaries">
+        <a class="technical-evidence__card" href="unseen.html">
+          <p class="eyebrow">Unseen</p>
+          <h3>Interactive-system delivery</h3>
+          <p>Blueprint and Python systems, asset streaming, colour services and exhibition delivery for an Unreal Engine artwork.</p>
+          <span>Explore contribution →</span>
+        </a>
+        <a class="technical-evidence__card" href="projects.html#optimisation-work">
+          <p class="eyebrow">59″ Metamorphosis collection</p>
+          <h3>Measured performance work</h3>
+          <p>Maintained 60 FPS across the collection, with 11 ms game-thread and 9 ms GPU-thread times.</p>
+          <span>Explore optimisation work →</span>
+        </a>
+        <a class="technical-evidence__card" href="resume.html">
+          <p class="eyebrow">Installed artwork operations</p>
+          <h3>Support systems that last</h3>
+          <p>PowerShell tooling, monitoring, remote diagnosis and live technical support for deployed interactive systems.</p>
+          <span>View experience →</span>
+        </a>
+      </div>
+    </section>
+    <section id="technical" class="projects-section technical-section">
+      <p class="eyebrow">Technical focus</p><h2>From interactive systems to installed-artwork operations</h2>
+      <div class="capability-grid">
+        <article class="capability-card"><h3>Interactive engine systems</h3><p>Unity and Unreal Engine applications built with C#, Blueprints, Niagara, materials and real-time rendering systems.</p></article>
+        <article class="capability-card"><h3>Performance engineering</h3><p>GPU and CPU profiling, memory optimisation, asset streaming, LODs, animation cost, draw calls and rendering scalability.</p></article>
+        <article class="capability-card"><h3>Physical interaction &amp; integration</h3><p>Gesture and skeleton tracking, camera and sensor input, projection workflows, networked systems and multi-display experiences.</p></article>
+        <article class="capability-card"><h3>Creative technology R&amp;D</h3><p>Rapid prototyping and technical investigation—from procedural real-time artwork and generative systems to new interaction approaches.</p></article>
+        <article class="capability-card"><h3>Cross-platform delivery</h3><p>Windows, Linux/AArch64 and NVIDIA Jetson deployment, plus WebGL and mobile delivery where a project requires it.</p></article>
+        <article class="capability-card"><h3>Operations &amp; live support</h3><p>PowerShell support tooling, fleet updates, Zabbix monitoring, remote maintenance and live client troubleshooting for installed artworks.</p></article>
+      </div>
+    </section>
+    <section class="projects-section featured-work">
+      <p class="eyebrow">Selected work</p><h2>Studio contributions &amp; independent projects</h2>
+      <div class="projects-grid">
+        <a href="unseen.html" class="project-card"><img src="images/unseenexpo.webp" alt="Unseen interactive artwork"><div class="project-info"><h3>Unseen</h3><p>Unreal Engine systems work spanning Blueprints, Python tooling, asset streaming, colour services and exhibition deployment.</p><span class="project-link">Read case study →</span></div></a>
+        <a href="projects.html" class="project-card"><img src="images/Spectrum Immersive.png" alt="Spectrums Immersive installation"><div class="project-info"><h3>Spectrums Immersive</h3><p>UE5 development for a multi-display interactive installation, covering real-time input, networked presentation and delivery.</p><span class="project-link">View contributions →</span></div></a>
+        <a href="projects.html" class="project-card"><img src="images/fs6.PNG" alt="Project Ashborn game"><div class="project-info"><h3>Project Ashborn</h3><p>Unity technical-art and programming work: lighting, VFX, C# gameplay systems, UI and post-processing optimisation.</p><span class="project-link">View contributions →</span></div></a>
+      </div><a href="projects.html" class="text-button section-link">View all projects →</a>
+    </section>
+    <section id="contact" class="section">
+      <p class="eyebrow">Get in touch</p><h2>Connect</h2>
+      <p>Connect via <a href="mailto:canberksahin97@gmail.com">email</a>, <a href="https://www.linkedin.com/in/canberksahin/" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://github.com/CanBerkSahin-io" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const hero = document.querySelector('.hero');
+      const canvas = document.getElementById('heroResponseField');
+      const context = canvas?.getContext('2d');
+      if (!hero || !canvas || !context) return;
 
-    <!-- FADE EFFECT SCRIPT -->
-    <script>
-        window.addEventListener('scroll', function() {
-            const hero = document.querySelector('.hero');
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const pointer = { x: -1000, y: -1000 };
+      const pulses = [];
+      let points = [];
+      let width = 0;
+      let height = 0;
+      let lastPulse = 0;
 
-            if (scrollPosition < windowHeight) {
-                hero.style.opacity = 1 - scrollPosition / windowHeight;
-            }
+      function resize() {
+        const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+        width = hero.clientWidth;
+        height = hero.clientHeight;
+        canvas.width = Math.floor(width * pixelRatio);
+        canvas.height = Math.floor(height * pixelRatio);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+        const count = Math.min(72, Math.max(34, Math.round((width * height) / 18000)));
+        points = Array.from({ length: count }, (_, index) => ({
+          x: ((index * 67) % width) + 12,
+          y: ((index * 113) % height) + 12,
+          phase: index * 0.71,
+          size: 1.3 + (index % 3) * 0.35
+        }));
+      }
+
+      function addPulse(x, y) {
+        pulses.push({ x, y, start: performance.now() });
+        if (pulses.length > 3) pulses.shift();
+      }
+
+      function positionFromEvent(event) {
+        const rect = hero.getBoundingClientRect();
+        return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+      }
+
+      hero.addEventListener('pointermove', (event) => {
+        const position = positionFromEvent(event);
+        pointer.x = position.x;
+        pointer.y = position.y;
+        const now = performance.now();
+        if (now - lastPulse > 220) {
+          addPulse(position.x, position.y);
+          lastPulse = now;
+        }
+      });
+      hero.addEventListener('pointerdown', (event) => {
+        const position = positionFromEvent(event);
+        addPulse(position.x, position.y);
+      });
+      hero.addEventListener('pointerleave', () => { pointer.x = -1000; pointer.y = -1000; });
+
+      function draw(time) {
+        context.clearRect(0, 0, width, height);
+        const activePulses = pulses.filter((pulse) => time - pulse.start < 1600);
+        pulses.splice(0, pulses.length, ...activePulses);
+
+        points.forEach((point) => {
+          const dx = point.x - pointer.x;
+          const dy = point.y - pointer.y;
+          const distance = Math.hypot(dx, dy);
+          const influence = Math.max(0, 1 - distance / 220);
+          const pulseInfluence = activePulses.reduce((strength, pulse) => {
+            const age = time - pulse.start;
+            const radius = age * 0.22;
+            const distanceFromPulse = Math.hypot(point.x - pulse.x, point.y - pulse.y);
+            return Math.max(strength, Math.max(0, 1 - Math.abs(distanceFromPulse - radius) / 75) * (1 - age / 1600));
+          }, 0);
+          const drift = reducedMotion.matches ? 0 : Math.sin(time / 1300 + point.phase) * 2.5;
+          const opacity = 0.13 + influence * 0.35 + pulseInfluence * 0.28;
+          const size = point.size + influence * 2 + pulseInfluence * 1.5;
+          context.beginPath();
+          context.fillStyle = pulseInfluence > 0.08 ? `rgba(255, 123, 0, ${opacity})` : `rgba(102, 204, 255, ${opacity})`;
+          context.arc(point.x + (dx / Math.max(distance, 1)) * influence * 13, point.y + drift + (dy / Math.max(distance, 1)) * influence * 13, size, 0, Math.PI * 2);
+          context.fill();
         });
-    </script>
 
+        if (!reducedMotion.matches) requestAnimationFrame(draw);
+      }
+
+      resize();
+      window.addEventListener('resize', resize, { passive: true });
+      requestAnimationFrame(draw);
+    })();
+  </script>
 </body>
 </html>

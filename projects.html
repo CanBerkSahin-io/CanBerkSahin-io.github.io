@@ -1,407 +1,270 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Can Berk Sahin</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar"><div class="logo">Can Berk Sahin</div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#technical-showcase">Technical focus</a></li><li><a href="projects.html">Projects</a></li><li><a href="resume.html">Resume</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav>
+  <header class="hero" style="height:40vh;"><div class="hero-content"><p class="eyebrow">Portfolio</p><h1>Projects</h1><p>Interactive systems, creative technology and software development.</p></div></header>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">Can Berk Sahin</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+  <section class="project-explorer" id="projectExplorer" aria-label="Browse projects">
+    <div class="project-explorer__inner">
+      <div class="project-explorer__group">
+        <p class="project-explorer__label">Jump to</p>
+        <div class="project-explorer__buttons">
+          <a href="#recent-work">Recent work</a>
+          <a href="#optimisation-work">Optimisation work</a>
+          <a href="#independent-work">Independent work</a>
+        </div>
+      </div>
+      <div class="project-explorer__group">
+        <p class="project-explorer__label">Filter by contribution</p>
+        <div class="project-explorer__buttons" id="projectFilters">
+          <button type="button" class="project-filter is-active" data-filter="all" aria-pressed="true">All work</button>
+          <button type="button" class="project-filter" data-filter="development" aria-pressed="false">Development</button>
+          <button type="button" class="project-filter" data-filter="optimisation" aria-pressed="false">Optimisation</button>
+          <button type="button" class="project-filter" data-filter="unity" aria-pressed="false">Unity</button>
+          <button type="button" class="project-filter" data-filter="unreal engine" aria-pressed="false">Unreal Engine</button>
+          <button type="button" class="project-filter" data-filter="deployment" aria-pressed="false">Deployment</button>
+          <button type="button" class="project-filter" data-filter="performance" aria-pressed="false">Performance</button>
+        </div>
+      </div>
+      <p class="project-filter-status" id="projectFilterStatus" aria-live="polite">Showing all projects.</p>
+    </div>
+  </section>
 
-<!-- HERO -->
-<header class="hero" style="height: 40vh;">
-  <div class="hero-content">
-    <h1>Projects</h1>
-  </div>
-</header>
+  <section class="projects-section" id="recent-work" data-project-section>
+    <p class="eyebrow">Dominic Harris Studio</p><h2 class="other-projects-title">Recent work</h2>
+    <div class="projects-grid">
+      <article class="project-card"><img src="images/unseenexpo.webp" alt="Unseen"><div class="project-info"><h3>Unseen</h3><p>UE4/UE5 interactive artwork. Contributed Blueprint and Python systems, asset streaming, colour services and exhibition deployment.</p></div></article>
+      <article class="project-card"><img src="images/sw_7d.webp" alt="Snow White and 7 Dwarfs"><div class="project-info"><h3>Snow White &amp; 7 Dwarfs</h3><p>Modernised a Unity 5 artwork, improving tracking, visuals and runtime performance across evolving hardware.</p></div></article>
+      <article class="project-card"><img src="images/metamorphosis_optimized_visual.png" alt="Metamorphosis Collection"><div class="project-info"><h3>Metamorphosis Collection</h3><p>Unreal Engine optimisation across animation, materials, asset handling and deployment for multiple formats.</p></div></article>
+      <article class="project-card"><img src="images/seasons.jpg" alt="Seasons"><div class="project-info"><h3>Seasons</h3><p>Developed and deployed Unreal Engine seasonal artwork experiences, including performance and Linux hardware work.</p></div></article>
+      <article class="project-card"><img src="images/SW.png" alt="Snow White Immersive Experience"><div class="project-info"><h3>Snow White Immersive</h3><p>Unity immersive installation with real-time gesture input, projection workflows and on-site configuration.</p></div></article>
+      <article class="project-card"><img src="images/Spectrum Immersive.png" alt="Spectrums Immersive"><div class="project-info"><h3>Spectrums Immersive</h3><p>UE5 immersive installation work across multi-display presentation, networking and interactive input.</p></div></article>
+      <article class="project-card"><img src="images/unseens.jpg" alt="Metamorphosis Unseen"><div class="project-info"><h3>Metamorphosis Unseen</h3><p>Smaller-format Unreal artwork: runtime optimisation, draw-call reduction and animation-system work.</p></div></article>
+      <article class="project-card"><img src="images/eot.jpg" alt="Essence of Time"><div class="project-info"><h3>Essence of Time</h3><p>Updated and supported a legacy Unreal Engine installation for new hardware and deployment requirements.</p></div></article>
+      <article class="project-card"><img src="images/unico4.jpg" alt="Metamorphosis Unicus"><div class="project-info"><h3>Metamorphosis Unicus</h3><p>Unity WebGL and mobile interactive artwork with touch-led collaborative interaction.</p></div></article>
+      <article class="project-card"><img src="https://cdn.prod.website-files.com/5eade4dfa0d3e4518162ea39/64347db49b115f437223cbbb_Jungled%20by%20Dominic%20Harris%20-%20thumb.webp" alt="Jungled by Dominic Harris"><div class="project-info"><h3>Jungled</h3><p>Unity foliage and shader profiling to reduce continuous runtime GPU and CPU load.</p></div></article>
+    </div>
+  </section>
 
-<!-- FEATURED PROJECT -->
-<div class="featured-project">
-  <div class="featured-text">
-    <h2 class="other-projects-title">Featured Project</h2>
-    <h2>Unseen</h2>
-    <h4>Dominic Harris Studios</h4>
-    <p>Led the development of "Unseen," a real-time interactive installation utilizing AI-driven generative systems and Unreal Engine 4 (Blueprints) to render over 13,500 dynamic butterflies. Engineered a Python-based backend to algorithmically generate and display triadic color palettes and implement an adaptive color matching system based on advanced color theory principles. Recognized by NVIDIA for technical innovation in AI and real-time graphics.</p>
-    <a href="javascript:void(0);" class="cta-button"
-       onclick="openProjectModal(['images/unseenexpo.webp', 'images/unseen.jpg','images/unseenexpo2.webp'], 'Unseen', 'Dominic Harris Studios',
-       `Real-time AI generative installation built in UE4 then later upgraded to UE5. Python backend controls 13,500 butterflies with adaptive color theory logic which geneates Colourful random Multi-colour Gradients.
-         <br><br>
-          <p>Led the technical development of Unseen under guidance and collaboration from rest of the team, an interactive digital installation showcasing 13,500+ AI-generated butterfly species created from global natural history museum datasets. Oversaw the project from concept phase to final deployment, currently exhibited at Halcyon Gallery, New Bond Street, London.</p>
-          <br><br>
-          <p>Real-Time Interactive System (UE4): Architected and implemented a high-performance Unreal Engine 4 Blueprint framework for dynamic asset composition, enabling smooth rendering and interaction with thousands of unique butterfly assets at exhibition scale.</p>
-          <br><br>
-          <p>Python Backend Services: Developed a custom Python backend to generate triadic colour palettes, perform automated colour matching against provided butterflies, and transmit palette data to UE4 in real time.</p>
-          <br><br>
-          <p>Optimized Application: Designed an asset streaming to efficiently manage the large butterfly dataset without impacting performance and dynamically loading hundreds of unique assets as needed on different platform requirements</p>`
-       )">View Project</a>
-  </div>
-  <div class="featured-image">
-    <img src="images/unseenexpo.webp" alt="Unseen Project">
-  </div>
-</div>
+  <section class="projects-section" id="optimisation-work" data-project-section><p class="eyebrow">Measured outcomes</p><h2 class="other-projects-title">Optimisation work</h2><div class="projects-grid">
+    <article class="project-card project-card--text"><div class="project-info"><h3>59″ Metamorphosis collection</h3><p>Maintained 60 FPS across the collection, with 11 ms game-thread and 9 ms GPU-thread times.</p></div></article>
+    <article class="project-card project-card--text"><div class="project-info"><h3>Worldstage optimisation pass</h3><p>Introduced a butterfly mesh with 95.6% fewer triangles, 93.6% fewer vertices and 46% fewer bones, plus runtime efficiency improvements.</p></div></article>
+    <article class="project-card project-card--text"><div class="project-info"><h3>59″ Elements</h3><p>Memory-optimisation work deployed following quality assurance and release preparation.</p></div></article>
+    <article class="project-card project-card--text"><div class="project-info"><h3>Unseen 59″ / Windows</h3><p>Optimised assets, motion blur, LOD behaviour and runtime resource handling.</p></div></article>
+  </div></section>
 
-<!-- OTHER PROJECTS -->
-<section class="projects-section">
-  <h2 class="other-projects-title">Other Projects</h2>
-  <div class="projects-grid">
+  <section class="projects-section" id="independent-work" data-project-section><p class="eyebrow">Independent work</p><h2 class="other-projects-title">Games &amp; university projects</h2><div class="projects-grid">
+    <article class="project-card"><img src="images/fs6.PNG" alt="Project Ashborn"><div class="project-info"><h3>Project Ashborn</h3><h5>Fireslug Studios</h5><p>Technical-art and programming contribution to a dungeon-crawler RPG.</p></div></article>
+    <article class="project-card"><img src="https://github.com/CanBerkSahin-io/Procedural_Content_Generation/assets/61757258/d9f794c3-396d-4fd1-9441-929fc2e14c67" alt="Procedural Content Generation project"><div class="project-info"><h3>Procedural Content Generation</h3><h5>Master’s Major Project</h5><p>Unity project exploring Perlin-noise terrain chunks and procedural placement for 3D game environments.</p></div></article>
+    <article class="project-card"><img src="images/Press Release 2.png" alt="Together We Survive"><div class="project-info"><h3>Together We Survive</h3><h5>Indie Game</h5><p>Collaborative retro PS1-inspired zombie-survival game.</p></div></article>
+    <article class="project-card"><img src="images/motu1.jpg" alt="Manuku Motu"><div class="project-info"><h3>Manuku Motu</h3><h5>University Project</h5><p>Accessible first-person puzzle game using environmental and audio feedback.</p></div></article>
+    <article class="project-card"><img src="images/forgotten1.png" alt="Forgotten Memories"><div class="project-info"><h3>Forgotten Memories</h3><h5>University Project</h5><p>Atmospheric narrative Unity game focused on exploration and interaction.</p></div></article>
+    <article class="project-card"><img src="images/level 2.png" alt="Urban Wards"><div class="project-info"><h3>Urban Wards</h3><h5>University Dissertation Project</h5><p>3D serious game for hazard-perception training and final-year research.</p></div></article>
+  </div></section>
 
-    <div class="project-card">
-      <img src="images/sw_7d.webp" alt="Snow White & 7 Dwarfs">
-      <div class="project-info">
-        <h3>Snow White & 7 Dwarfs</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Lead Developer on Snow White & 7 Dwarfs Artwork, Upgraded backend and visual look for different platform and camera use for SK Tracking</p>
-       <a href="javascript:void(0);" class="cta-button small"
-        onclick="openProjectModal(
-          ['images/sw_7d.webp', 'images/sw_7d2.webp'],
-          'Snow White & 7 Dwarfs',
-          'Dominic Harris Studios',
-          `<p>Lead Developer on Snow White & 7 Dwarfs Artwork, Upgraded backend and visual look for different platform and camera use for SK Tracking.</p>
-          <br><br>
-          <p>The Ambition of the project was to give it a massive upgrade in visual fidelity and performance, ensuring a seamless experience across new generations of hardware.</p>
-          <p>The 2013 version of the project served as a foundation, and this upgrade aimed to enhance every aspect, from asset quality to rendering techniques to SK Tracking and cameras being used.</p>
-          <br><br>
-          <p>I stripped out the Kinect2 support and re-implemented the tracking system using a Real Sense camera and our in-house built/trained Yolo SK tracking Model which UDP piped in gesture data which improved the overall tracking accuracy and responsiveness and removed the Kinect2 dependency as those cameras have been made redundant.</p>
-          <p>Additionally, I worked on enhancing the visual fidelity of the project by upgrading the asset quality and manual cleanup of Normal maps and textures. With the use of a 1080P camera, we were able to achieve a significant boost in Reflection detail and clarity.</p>
-          <br><br>
-          <p>Moreover, I implemented a new lighting system that took advantage of the latest rendering techniques, further improving the overall visual quality.</p>
-          <br><br>
-          <p>Finally, I created a comprehensive testing suite to ensure the stability and performance of the project across all supported hardware.</p>
-          <video controls style='width:100%;margin-top:1em;'>
-              <source src='images/sw_dev.mp4' type='video/mp4'>
-              Your browser does not support the video tag.
-            </video>`
-        )">View Project</a>
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="close-modal" type="button" aria-label="Close project details">&times;</button>
+      <figure class="modal-project-media" id="modalProjectMedia"><img id="modalImage" src="" alt=""></figure>
+      <div class="before-after" id="manukuComparison" hidden>
+        <img class="before-after__image" src="images/MMBefore.gif" alt="Manuku Motu menu before environment art was applied">
+        <div class="before-after__after" id="manukuAfter">
+          <img class="before-after__image" src="images/MMAfter 2.gif" alt="Manuku Motu menu after environment art was applied">
+        </div>
+        <div class="before-after__divider" aria-hidden="true"><span>↔</span></div>
+        <span class="before-after__label before-after__label--before">Before</span>
+        <span class="before-after__label before-after__label--after">After</span>
+        <input class="before-after__range" id="manukuRange" type="range" min="0" max="100" value="50" aria-label="Reveal Manuku Motu after image">
       </div>
-    </div>
-
-    <div class="project-card">
-      <img src="images/metamorphosis_optimized_visual.png" alt="Optimizing Metamorphosis Collection">
-      <div class="project-info">
-        <h3>Optimizing Metamorphosis Collection</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Primary developer optimizing Unreal Engine performance. Focused on animation fast-paths, m...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/metamorphosis_optimized_visual.png'], 'Optimizing Metamorphosis Collection', 'Dominic Harris Studios', `Primary developer optimizing Unreal Engine performance. Focused on animation fast-paths, multithreaded updates, pose caching, LOD simplification, garbage collection tuning.`)">View Project</a>
+      <div class="modal-description">
+        <p class="eyebrow" id="modalKicker">Project details</p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalSummary"></p>
+        <ul class="project-detail-list" id="modalDetails"></ul>
+        <a class="text-button modal-case-study" id="modalCaseStudy" href="unseen.html" hidden>Read case study →</a>
+        <a class="text-button modal-source" id="modalSource" href="#" target="_blank" rel="noopener" hidden>View source on GitHub →</a>
+        <p class="modal-image-credit" id="modalImageCredit">Project images credited to the Dominic Harris website.</p>
       </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/seasons.jpg" alt="Seasons">
-      <div class="project-info">
-        <h3>Seasons</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Unreal Engine-based artwork featuring dynamic seasonal transitions built on top of the metamorphosis Project.</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/seasons.jpg'], 'Seasons', 'Dominic Harris Studios', 
-           `<p>Unreal Engine-based artwork featuring dynamic seasonal transitions built on top of the metamorphosis Project.</p>
-            <br><br>
-            <p>The Brief of the Project was to Upgrade the metamorphosis project to include more butterfly actors whilst maintaining performance and visual fidelity.</p>
-            <p>Additionally, I implemented a new lighting system that took advantage of the latest rendering techniques, further improving the overall visual quality.</p>
-            <p>This project was built and optimised for Linux Orin using LinuxAArch64 Architecture.</p>
-           `)">View Project</a>
-      </div>
-    </div>
-    
-<div class="project-card">
-  <img src="images/SW.png" alt="Snow White Immersive Experience">
-  <div class="project-info">
-    <h3>Snow White Immersive Experience</h3>
-    <h5>Dominic Harris Studios</h5>
-    <p>Gesture-based interactive storytelling using Unity and Kinect Azure to trigger character responses in real time.</p>
-    <a href="javascript:void(0);" class="cta-button small"
-       onclick="openProjectModal(
-         ['images/SW.png'],
-         'Snow White Immersive Experience',
-         'Dominic Harris Studios',
-         `Snow White & 7 Dwarfs Immersive (SW7D) is an upscaled and more ambitious project of its predecessor, which was displayed on a 33 Windows platform single network screens
-         <br><br>
-          <p>The immersive version was built solely in Unity on top of the outdated Unity 5x engine version and upgraded to Unity 2022 to utilise all the new possible features of the Universal Render Pipeline.</p>
-          <br><br>
-          <p>SW7D uses real-time gesture recognition tracking through Kinect Azures placed around the immersive space. Incoming Skeleton Data based on real world coordinates are then evaluated under certain conditions which equate to certain Gestures. Once Gestures are recognised we play corresponding animations depending on whether you are facing that specific character or not. A late feature addition also includes a Hokuyo laser which detects touch points and sends them via UDP messages into Unity, which then translates them into world space to accurately mimic a touch based on which area of the immersive space you are touching.</p>
-          <br><br>
-          <p>The Unity output was designed in a modular way to fit any immersive space if needed and adjusted on site. The video output that displays the characters uses a spout sender from each character camera and then is sent over to Light Act, which stitches the content of the characters together and displays them to video projector outputs.</p>
-          <br><br>
-          <p>This Immersive Artwork has been displayed at Halcyon Gallery during the Feeding Consciousness exhibition in Mayfair, London. Along with Galleries in NYC + Washington Under Halcyon Gallery</p>`
-       )">View Project</a>
-  </div>
-</div>
-    
-    <div class="project-card">
-      <img src="images/Spectrum Immersive.png" alt="Spectrums Immersive Experience">
-      <div class="project-info">
-        <h3>Spectrums Immersive Experience</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>UE5-based Immersive Artwork Utilising Multi-Ndisplay Clients with Cluster Network Messages.</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/Spectrum Immersive.png', 'images/dhs_spectrum.jpg', 'images/dhs_spectrum2.jpg'], 'Spectrums Immersive Experience', 'Dominic Harris Studios', `UE5-based 3 client Ndisplay installation using Hokuyo/Sick laser range finders and Ndisplay Cluster messages for networking between each Ndisplay Clients. Immersive Installation premiered London Flagship Haclyon Gallery along with installations in NYC + Washington Galleries. More information about the Immersive Artwork can be found directly on Dominic Harris' Website`)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/unseens.jpg" alt="Metamorphosis Unseen">
-      <div class="project-info">
-        <h3>Metamorphosis Unseen</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Smaller format Unseen built for Jetson TX2. Optimized draw calls, shader usage, animation ...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/unseens.jpg'], 'Metamorphosis Unseen', 'Dominic Harris Studios', `Smaller format Unseen built for Jetson TX2. Optimized draw calls, shader usage, animation systems.`)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/eot.jpg" alt="Essence Of Time">
-      <div class="project-info">
-        <h3>Essence Of Time</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Updated a legacy UE4 installation for Nvidia Jetson TX2 deployment. Cleaned systems and mo...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/eot.jpg'], 'Essence Of Time', 'Dominic Harris Studios', `Updated a legacy UE4 installation for Nvidia Jetson TX2 deployment. Cleaned systems and modernized visuals.`)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/unico4.jpg" alt="Metamorphosis Unicus">
-      <div class="project-info">
-        <h3>Metamorphosis Unicus</h3>
-        <h5>Dominic Harris Studios</h5>
-        <p>Unity WebGL/mobile project. Real-time touch interaction layered with collaborative generat...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/unico4.jpg', 'images/unico.jpg'], 'Metamorphosis Unicus', 'Dominic Harris Studios', `Unity WebGL/mobile project. Real-time touch interaction layered with collaborative generative design.
-                       <video controls style='width:50%;margin-top:1em;'>
-              <source src='images/unicoVid.mp4' type='video/mp4'>
-              Your browser does not support the video tag.
-            </video>`
-           )">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/fs6.PNG" alt="Project Ashborn">
-      <div class="project-info">
-        <h3>Project Ashborn</h3>
-        <h5>Fireslug Studios</h5>
-        <p>Technical Artist leading visual development on Dungeon crawler RPG </p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/fs5.PNG', 'images/fs.gif'], 'Project Ashborn', 'Fireslug Studios',
-            `● Development Lighting overhaul – Created a lighting system to set the mood to the game and added particle effects to interactable objects.
-            <br><br>
-            <p>● Water Shader used in river stream and waterfalls</p>
-            <br><br>
-            <p>● Fixing shading bugs on emissions and shaders to fit new lighting system.</p>
-            <br><br>
-            <p>● Collaborating with Artists, creative directors, and technical engineers through a handful of meetings per week to ensure workload is being handled correctly for promotional launch.</p>
-            <br><br>
-            <p>● C# scripting for main menu navigation, gameplay, development, and animation sequences.</p>
-            <br><br>
-            <p>● Terrain bug fixes</p>
-            <br><br>
-            <p>● Implementation of a main menu credits page with UI design and creation</p>
-            <br><br>
-            <p>● Controller input Implementation for Title screen</p>
-            <br><br>
-            <p>● Health-UI overhaul including changes from world space to overlay UI</p>
-            <br><br>  
-            <img src='images/fs2.jpg' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-            <img src='images/fs3.PNG' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-            <img src='images/fs4.PNG' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-            <img src='images/fs5.PNG' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-            `)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/Press Release 2.png" alt="Together We Survive">
-      <div class="project-info">
-        <h3>Together We Survive</h3>
-        <h5>Indie Game</h5>
-        <p>Unity-Collaborative retro PS1 inspired FPS zombie survival...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/Press Release 2.png'], 'Together We Survive', 
-           'Indie Game', 
-           `Unity-Collaborative retro PS1 inspired FPS zombie survival
-           <br><br>
-           <p>Together We Survive is a retro first person zombie shooter that was developed in a two person team within a 3 month period for a masters game development module.</p>
-           <br><br>
-           <p>● Visual art direction - (PSX style graphics, Lighting & post processing, UI implementation, particle system - VFX)</p>
-           <br><br>
-           <p>● Level design - (3D environment layout, asset integration, gameplay mechanics)</p>
-           <br><br>
-           <p>● Collaboration - (Working closely with a small team to deliver the project on time)</p>
-          <br><br>
-           <p>● Animation of weapon handling (Shooting, reload, pull-out animations)</p>
-           <br><br>
-           <p>● 3D modelling of all weapons & attachments (Pistol, Shotgun, Rifle, Baseball Bat, laser sight, flashlight)</p>
-           <br><br>
-           <p>● Optimisations - (occlusion culling, GPU instancing, downgrading texture sizes, LOD groups, static batching)</p>
-           <p>● Audio design and implementation</p>
-           <video controls style='width:100%;margin-top:1em;'>
-              <source src='images/Together We Survive Game Trailer.mp4' type='video/mp4'>
-              Your browser does not support the video tag.
-            </video>
-           <img src='images/together we survive gif.gif' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-           <img src='images/Press Release 4.png' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-           `)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/motu1.jpg" alt="Manuku Motu">
-      <div class="project-info">
-        <h3>Manuku Motu</h3>
-        <h5>University Project</h5>
-        <p>First-person puzzle game with no UI. Designed for accessibility using pure world feedback ...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/motu1.jpg'], 'Manuku Motu', 'University Project', `First-person puzzle game with no UI. Designed for accessibility using pure world feedback and triggers.
-           <br><br>
-           <p>Manuku Motu is a first-person puzzle game that eliminates traditional UI elements, relying instead on environmental cues and audio feedback to guide players. The game is designed to be accessible to a wide range of players, including those with visual impairments.</p>
-           <br><br>
-           <p>● Water simulation - (Realistic water behavior, buoyancy, and interaction)</p>
-           <br><br>
-           <p>● Visual Pass - (Art direction, visual storytelling, environmental design)</p>
-           <br><br>
-           <p>● Game Design - (Level design, puzzle mechanics, player feedback systems)</p>
-           <br><br>
-           <p>● Accessibility - (Inclusive design principles, user testing with diverse players)</p>
-           <br><br>
-           <p>● Collaboration - (Working with a small team to iterate on design ideas and ensure completion of project)</p>
-           <br><br>
-           <p>● Audio Design - (Creating an immersive soundscape to replace visual cues)</p>
-           <br><br>
-           <p>● User Testing - (Conducting playtests to gather feedback and improve accessibility)</p>
-           <img src='images/motu2.jpg' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-           <img src='images/MMBefore.gif' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-           <img src='images/MMAfter.gif' alt='Extra Image' style='width:100%;margin-top:1em;border-radius:8px;' />
-           `)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/forgotten1.png" alt="Forgotten Memories">
-      <div class="project-info">
-        <h3>Forgotten Memories</h3>
-        <h5>University Project</h5>
-        <p>Atmospheric narrative Unity game. Designed environments and interactions for exploration-b...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/forgotten1.png','images/forgotten2.jpg','images/fmcrash.png','images/fmchurch.png'], 'Forgotten Memories', 'University Project', `Atmospheric narrative Unity game. Designed environments and interactions for exploration-based story.`)">View Project</a>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <img src="images/level 2.png" alt="Urban Wards">
-      <div class="project-info">
-        <h3>Urban Wards</h3>
-        <h5>University Dissertation Project</h5>
-        <p>3D serious game built in Unreal for hazard perception training and final-year research pro...</p>
-        <a href="javascript:void(0);" class="cta-button small"
-           onclick="openProjectModal(['images/level 2.png'], 'Urban Wards', 'University Dissertation Project', `3D serious game built in Unreal for hazard perception training and final-year research project.`)">View Project</a>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- MODAL -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <div class="modal-gallery">
-      <div class="carousel" id="modalCarousel"></div>
-      <div class="carousel-nav">
-        <button onclick="prevSlide()">‹</button>
-        <button onclick="nextSlide()">›</button>
-      </div>
-    </div>
-    <div class="modal-description">
-      <h2 id="modalTitle">Project Title</h2>
-      <h4 id="modalSubTitle">Workplace</h4>
-      <p id="modalText">Project description and your tasks here.</p>
     </div>
   </div>
-</div>
 
-<!-- SCRIPT -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let currentSlide = 0;
-      let imageList = [];
-    
-      function openProjectModal(images, title, subtitle, description) {
-        const carousel = document.getElementById("modalCarousel");
-        carousel.innerHTML = '';
-        imageList = images;
-        currentSlide = 0;
-    
-        images.forEach((src, index) => {
-          const img = document.createElement("img");
-          img.src = src;
-          img.style.transform = `translateX(${index * 100}%)`;
-          img.style.transition = "transform 0.4s ease";
-          img.style.position = "absolute";
-          img.style.width = "100%";
-          carousel.appendChild(img);
-        });
-    
-        document.getElementById("modalTitle").textContent = title;
-        document.getElementById("modalSubTitle").textContent = subtitle;
-        document.getElementById("modalText").innerHTML = description;
-        document.getElementById("projectModal").style.display = "block";
-        updateSlides();
-      }
-    
-      function updateSlides() {
-        const imgs = document.querySelectorAll("#modalCarousel img");
-        imgs.forEach((img, i) => {
-          img.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
-        });
-      }
-    
-      function nextSlide() {
-        if (currentSlide < imageList.length - 1) {
-          currentSlide++;
-          updateSlides();
-        }
-      }
-    
-      function prevSlide() {
-        if (currentSlide > 0) {
-          currentSlide--;
-          updateSlides();
-        }
-      }
-    
-      // Attach to window for HTML inline onclick support
-      window.openProjectModal = openProjectModal;
-      window.nextSlide = nextSlide;
-      window.prevSlide = prevSlide;
-    
-      // Modal close
-      document.querySelector('.close-modal').onclick = function () {
-        document.getElementById("projectModal").style.display = "none";
-      };
-    
-      window.onclick = function (event) {
-        const modal = document.getElementById("projectModal");
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      };
+  <script>
+    const projectDetails = {
+      'Unseen': ['Built and maintained Unreal Engine Blueprint and Python tooling for interactive systems.', 'Improved asset-streaming behaviour and colour-management services.', 'Supported Windows exhibition deployment, hardware configuration and runtime testing.'],
+      'Snow White & 7 Dwarfs': ['Modernised a legacy Unity 5 application for contemporary hardware.', 'Worked on real-time tracking integration, visual behaviour and runtime stability.', 'Diagnosed compatibility issues and supported testing, installation and ongoing maintenance.'],
+      'Metamorphosis Collection': ['Profiled Unreal Engine animation, materials and asset-loading behaviour.', 'Optimised content and runtime settings for display-specific deployment targets.', 'Contributed to the 59-inch collection performance and memory optimisation pass.'],
+      'Seasons': ['Developed and deployed Unreal Engine seasonal artwork experiences.', 'Supported real-time rendering performance and cross-platform delivery.', 'Tested installation behaviour and maintained technical configurations.'],
+      'Snow White Immersive': ['Implemented Unity interaction features driven by real-time gesture input.', 'Integrated projection-oriented presentation workflows and installation configuration.', 'Tested the complete input-to-visual-response pipeline on site.'],
+      'Spectrums Immersive': ['Contributed Unreal Engine 5 systems for a multi-display immersive installation.', 'Worked across networked presentation, interactive input and real-time application behaviour.', 'Supported integration testing and technical delivery.'],
+      'Metamorphosis Unseen': ['Optimised Unreal Engine runtime behaviour through draw-call, asset and animation-system work.', 'Tuned motion blur, LOD behaviour and resource use for smaller display formats.', 'Prepared Windows and 59-inch variants for reliable deployment.'],
+      'Essence of Time': ['Updated a legacy Unreal Engine installation for new hardware requirements.', 'Resolved application, operating-system and deployment compatibility issues.', 'Supported technical maintenance of the installed artwork.'],
+      'Metamorphosis Unicus': ['Built Unity WebGL and mobile interactive functionality.', 'Implemented touch-led collaborative interaction and responsive runtime behaviour.', 'Supported browser and device-specific delivery requirements.'],
+      'Jungled': ['Profiled Unity foliage, shaders and scene-update behaviour.', 'Reduced continuous GPU and CPU load in the interactive environment.', 'Improved runtime stability while preserving the artwork’s visual response.'],
+      '59″ Metamorphosis collection': ['Maintained 60 FPS across the collection.', 'Measured 11 ms game-thread and 9 ms GPU-thread times.', 'Used Unreal Engine profiling data to guide performance decisions.'],
+      'Worldstage optimisation pass': ['Reduced triangle count by 95.6%, vertex count by 93.6% and bone count by 46%.', 'Improved skeletal-mesh complexity, texture streaming and runtime efficiency.', 'Reduced unnecessary Blueprint activity during idle operation.'],
+      '59″ Elements': ['Completed an Unreal Engine memory-optimisation pass for the 59-inch format.', 'Tested the updated build through quality assurance and release preparation.', 'The optimised release has been deployed.'],
+      'Unseen 59″ / Windows': ['Optimised assets, motion blur and LOD behaviour for the 59-inch and Windows variants.', 'Improved runtime resource handling and rendering settings for the target hardware.', 'Validated stability as part of the deployment workflow.'],
+      'Project Ashborn': ['Contributed Unity C# gameplay and technical-art work to a dungeon-crawler RPG.', 'Developed lighting and particle-effect systems, and resolved character-emission shading issues.', 'Optimised UI and post-processing, supported combat beta releases and rebuilt the health-system UI.'],
+      'Procedural Content Generation': ['Developed a Unity 2021.3 Master’s project exploring procedural content generation for 3D game environments.', 'Implemented Perlin-noise terrain-chunk generation and material-aware procedural placement.', 'Built systems for vegetation, forests, configurable point generation and story-progress item spawning.'],
+      'Together We Survive': ['Collaboratively developed a Unity retro PS1-inspired zombie-survival game.', 'Contributed gameplay implementation and production work within a small team.'],
+      'Manuku Motu': ['Built a Unity first-person puzzle experience with accessibility at its core.', 'Used environmental and audio feedback to communicate gameplay information.'],
+      'Forgotten Memories': ['Developed a narrative Unity game centred on exploration and interaction.', 'Built interactive gameplay systems and atmospheric presentation features.'],
+      'Urban Wards': ['Created a Unity 3D serious game for hazard-perception training.', 'Designed and implemented the application as final-year Computer Science research.']
+    };
+
+    const projectTags = {
+      'Unseen': ['Unreal Engine', 'Development', 'Deployment'],
+      'Snow White & 7 Dwarfs': ['Unity', 'Development', 'Optimisation'],
+      'Metamorphosis Collection': ['Unreal Engine', 'Development', 'Optimisation'],
+      'Seasons': ['Unreal Engine', 'Development', 'Deployment'],
+      'Snow White Immersive': ['Unity', 'Development', 'Interaction'],
+      'Spectrums Immersive': ['Unreal Engine', 'Development', 'Networking'],
+      'Metamorphosis Unseen': ['Unreal Engine', 'Development', 'Optimisation'],
+      'Essence of Time': ['Unreal Engine', 'Development', 'Deployment'],
+      'Metamorphosis Unicus': ['Unity', 'Development', 'WebGL'],
+      'Jungled': ['Unity', 'Development', 'Optimisation'],
+      '59″ Metamorphosis collection': ['Unreal Engine', 'Optimisation', 'Performance'],
+      'Worldstage optimisation pass': ['Unreal Engine', 'Optimisation', 'Performance'],
+      '59″ Elements': ['Unreal Engine', 'Optimisation', 'Memory'],
+      'Unseen 59″ / Windows': ['Unreal Engine', 'Optimisation', 'Windows'],
+      'Project Ashborn': ['Unity', 'Development', 'Technical Art'],
+      'Procedural Content Generation': ['Unity', 'C#', 'Procedural Generation'],
+      'Together We Survive': ['Unity', 'Development', 'Game Development'],
+      'Manuku Motu': ['Unity', 'Development', 'Accessibility'],
+      'Forgotten Memories': ['Unity', 'Development'],
+      'Urban Wards': ['Unity', 'Development', 'Research']
+    };
+
+    const projectImages = {
+      '59″ Metamorphosis collection': 'images/metamorphosis_optimized_visual.png',
+      'Worldstage optimisation pass': 'images/metamorphosis_optimized_visual.png',
+      '59″ Elements': 'images/metamorphosis_optimized_visual.png',
+      'Unseen 59″ / Windows': 'images/unseens.jpg'
+    };
+
+    const projectLinks = {
+      'Procedural Content Generation': 'https://github.com/CanBerkSahin-io/Procedural_Content_Generation'
+    };
+
+    const projectCaseStudies = {
+      'Unseen': 'unseen.html'
+    };
+
+    const studioProjects = new Set([
+      'Unseen', 'Snow White & 7 Dwarfs', 'Metamorphosis Collection', 'Seasons',
+      'Snow White Immersive', 'Spectrums Immersive', 'Metamorphosis Unseen',
+      'Essence of Time', 'Metamorphosis Unicus', 'Jungled',
+      '59″ Metamorphosis collection', 'Worldstage optimisation pass',
+      '59″ Elements', 'Unseen 59″ / Windows'
+    ]);
+
+    const modal = document.getElementById('projectModal');
+    const closeButton = modal.querySelector('.close-modal');
+    const modalProjectMedia = document.getElementById('modalProjectMedia');
+    const manukuComparison = document.getElementById('manukuComparison');
+    const manukuAfter = document.getElementById('manukuAfter');
+    const manukuRange = document.getElementById('manukuRange');
+    let lastCard;
+
+    function updateManukuComparison(value) {
+      manukuComparison.style.setProperty('--split', `${value}%`);
+      manukuAfter.style.clipPath = `inset(0 0 0 ${value}%)`;
+    }
+
+    manukuRange.addEventListener('input', (event) => updateManukuComparison(event.target.value));
+
+    document.querySelectorAll('.project-card').forEach((card) => {
+      const title = card.querySelector('h3').textContent.trim();
+      const tags = projectTags[title] || ['Development'];
+      const tagList = document.createElement('div');
+      tagList.className = 'project-tags';
+      tags.forEach((tag) => {
+        const tagElement = document.createElement('span');
+        tagElement.className = tag === 'Optimisation' ? 'project-tag project-tag--optimisation' : 'project-tag';
+        tagElement.textContent = tag;
+        tagList.appendChild(tagElement);
+      });
+      card.dataset.tags = tags.map((tag) => tag.toLowerCase()).join('|');
+      card.querySelector('.project-info').appendChild(tagList);
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-haspopup', 'dialog');
+      card.addEventListener('click', () => openProject(card));
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openProject(card); }
+      });
     });
-    </script>
-    
+
+    function openProject(card) {
+      const title = card.querySelector('h3').textContent.trim();
+      const cardImage = card.querySelector('img');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = cardImage?.getAttribute('src') || projectImages[title] || '';
+      modalImage.alt = cardImage?.getAttribute('alt') || `${title} project image`;
+      const isManukuComparison = title === 'Manuku Motu';
+      modalProjectMedia.hidden = isManukuComparison;
+      manukuComparison.hidden = !isManukuComparison;
+      if (isManukuComparison) {
+        manukuRange.value = 50;
+        updateManukuComparison(50);
+      }
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalSummary').textContent = card.querySelector('p').textContent.trim();
+      const details = projectDetails[title] || [];
+      document.getElementById('modalDetails').innerHTML = details.map((detail) => `<li>${detail}</li>`).join('');
+      const caseStudyLink = document.getElementById('modalCaseStudy');
+      caseStudyLink.hidden = !projectCaseStudies[title];
+      caseStudyLink.href = projectCaseStudies[title] || '#';
+      const sourceLink = document.getElementById('modalSource');
+      sourceLink.hidden = !projectLinks[title];
+      sourceLink.href = projectLinks[title] || '#';
+      document.getElementById('modalImageCredit').hidden = !studioProjects.has(title);
+      lastCard = card;
+      modal.style.display = 'block';
+      modal.setAttribute('aria-hidden', 'false');
+      closeButton.focus();
+    }
+
+    function closeProject() {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+      lastCard?.focus();
+    }
+
+    closeButton.addEventListener('click', closeProject);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeProject(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modal.style.display === 'block') closeProject(); });
+
+    const filterButtons = document.querySelectorAll('.project-filter');
+    const filterStatus = document.getElementById('projectFilterStatus');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        let matchCount = 0;
+        document.querySelectorAll('.project-card').forEach((card) => {
+          const matches = filter === 'all' || card.dataset.tags.split('|').includes(filter);
+          card.hidden = !matches;
+          if (matches) matchCount += 1;
+        });
+        document.querySelectorAll('[data-project-section]').forEach((section) => {
+          section.hidden = filter !== 'all' && !section.querySelector('.project-card:not([hidden])');
+        });
+        filterButtons.forEach((filterButton) => {
+          const isActive = filterButton === button;
+          filterButton.classList.toggle('is-active', isActive);
+          filterButton.setAttribute('aria-pressed', String(isActive));
+        });
+        filterStatus.textContent = filter === 'all' ? 'Showing all projects.' : `Showing ${matchCount} ${filter} project${matchCount === 1 ? '' : 's'}.`;
+      });
+    });
+  </script>
 </body>
 </html>
