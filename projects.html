@@ -74,7 +74,12 @@
   <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-content" role="document">
       <button class="close-modal" type="button" aria-label="Close project details">&times;</button>
-      <figure class="modal-project-media" id="modalProjectMedia"><img id="modalImage" src="" alt=""></figure>
+      <figure class="modal-project-media" id="modalProjectMedia"><img id="modalImage" src="" alt=""><video id="modalVideo" controls playsinline preload="metadata" hidden></video></figure>
+      <div class="project-gallery-controls" id="projectGalleryControls" hidden>
+        <button type="button" id="galleryPrevious" aria-label="Previous project media">← Previous</button>
+        <p id="galleryStatus" aria-live="polite"></p>
+        <button type="button" id="galleryNext" aria-label="Next project media">Next →</button>
+      </div>
       <div class="before-after" id="manukuComparison" hidden>
         <img class="before-after__image" src="images/MMBefore.gif" alt="Manuku Motu menu before environment art was applied">
         <div class="before-after__after" id="manukuAfter">
@@ -123,15 +128,15 @@
 
     const projectTags = {
       'Unseen': ['Unreal Engine', 'Development', 'Deployment'],
-      'Snow White & 7 Dwarfs': ['Unity', 'Development', 'Optimisation'],
+      'Snow White & 7 Dwarfs': ['Unity', 'Development', 'Optimisation', 'Deployment'],
       'Metamorphosis Collection': ['Unreal Engine', 'Development', 'Optimisation'],
       'Seasons': ['Unreal Engine', 'Development', 'Deployment'],
-      'Snow White Immersive': ['Unity', 'Development', 'Interaction'],
-      'Spectrums Immersive': ['Unreal Engine', 'Development', 'Networking'],
-      'Metamorphosis Unseen': ['Unreal Engine', 'Development', 'Optimisation'],
+      'Snow White Immersive': ['Unity', 'Development', 'Interaction', 'Deployment'],
+      'Spectrums Immersive': ['Unreal Engine', 'Development', 'Networking', 'Deployment'],
+      'Metamorphosis Unseen': ['Unreal Engine', 'Development', 'Optimisation', 'Deployment'],
       'Essence of Time': ['Unreal Engine', 'Development', 'Deployment'],
-      'Metamorphosis Unicus': ['Unity', 'Development', 'WebGL'],
-      'Jungled': ['Unity', 'Development', 'Optimisation'],
+      'Metamorphosis Unicus': ['Unity', 'Development', 'WebGL', 'Deployment'],
+      'Jungled': ['Unity', 'Development', 'Optimisation', 'Deployment'],
       '59″ Metamorphosis collection': ['Unreal Engine', 'Optimisation', 'Performance'],
       'Worldstage optimisation pass': ['Unreal Engine', 'Optimisation', 'Performance'],
       '59″ Elements': ['Unreal Engine', 'Optimisation', 'Memory'],
@@ -170,6 +175,51 @@
     const modal = document.getElementById('projectModal');
     const closeButton = modal.querySelector('.close-modal');
     const modalProjectMedia = document.getElementById('modalProjectMedia');
+    const modalVideo = document.getElementById('modalVideo');
+    const galleryControls = document.getElementById('projectGalleryControls');
+    const forgottenGallery = [
+      { src: 'images/forgotten1.png', alt: 'Forgotten Memories church exterior' },
+      { src: 'images/forgotten2.jpg', alt: 'Forgotten Memories house in the forest' },
+      { src: 'images/fgm1.png', alt: 'Forgotten Memories moonlit forest' },
+      { src: 'images/fmchurch.png', alt: 'Forgotten Memories church interior' },
+      { src: 'images/fmcrash.png', alt: 'Forgotten Memories driving scene at night' },
+      { src: 'images/fm2.mp4', alt: 'Forgotten Memories gameplay clip 1', video: true },
+      { src: 'images/fm3.mp4', alt: 'Forgotten Memories gameplay clip 2', video: true }
+    ];
+    const projectGalleries = {
+      'Forgotten Memories': forgottenGallery,
+      'Together We Survive': [
+        { src: 'images/Press Release 2.png', alt: 'Together We Survive zombie encounter' },
+        { src: 'images/Press Release 4.png', alt: 'Together We Survive graveyard environment' },
+        { src: 'images/Gameplay_5.png', alt: 'Together We Survive combat gameplay' },
+        { src: 'images/Together We Survive Game Trailer.mp4', alt: 'Together We Survive game trailer', video: true }
+      ]
+    };
+    let activeGallery = [];
+    let galleryIndex = 0;
+
+    function showGalleryMedia(index) {
+      if (!activeGallery.length) return;
+      galleryIndex = (index + activeGallery.length) % activeGallery.length;
+      const media = activeGallery[galleryIndex];
+      const image = document.getElementById('modalImage');
+      modalVideo.pause();
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+      image.hidden = Boolean(media.video);
+      modalVideo.hidden = !media.video;
+      if (media.video) {
+        modalVideo.src = media.src;
+        modalVideo.setAttribute('aria-label', media.alt);
+      } else {
+        image.src = media.src;
+        image.alt = media.alt;
+      }
+      document.getElementById('galleryStatus').textContent = `${galleryIndex + 1} / ${activeGallery.length} — ${media.alt}`;
+    }
+
+    document.getElementById('galleryPrevious').addEventListener('click', () => showGalleryMedia(galleryIndex - 1));
+    document.getElementById('galleryNext').addEventListener('click', () => showGalleryMedia(galleryIndex + 1));
     const manukuComparison = document.getElementById('manukuComparison');
     const manukuAfter = document.getElementById('manukuAfter');
     const manukuRange = document.getElementById('manukuRange');
@@ -208,8 +258,17 @@
       const title = card.querySelector('h3').textContent.trim();
       const cardImage = card.querySelector('img');
       const modalImage = document.getElementById('modalImage');
+      modalVideo.pause();
+      modalVideo.removeAttribute('src');
+      modalVideo.load();
+      modalVideo.hidden = true;
+      modalImage.hidden = false;
+      activeGallery = projectGalleries[title] || [];
+      const hasGallery = activeGallery.length > 0;
+      galleryControls.hidden = !hasGallery;
       modalImage.src = cardImage?.getAttribute('src') || projectImages[title] || '';
       modalImage.alt = cardImage?.getAttribute('alt') || `${title} project image`;
+      if (hasGallery) showGalleryMedia(0);
       const isManukuComparison = title === 'Manuku Motu';
       modalProjectMedia.hidden = isManukuComparison;
       manukuComparison.hidden = !isManukuComparison;
@@ -235,6 +294,7 @@
     }
 
     function closeProject() {
+      modalVideo.pause();
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
       lastCard?.focus();

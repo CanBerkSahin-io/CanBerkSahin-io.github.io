@@ -360,6 +360,7 @@ body, html {
 }
 
 .project-card[role="button"] { cursor: pointer; }
+.project-card[hidden] { display: none; }
 .project-card[role="button"]:focus-visible { outline: 3px solid #00c3ff; outline-offset: 4px; }
 
 .project-card img {
@@ -964,13 +965,38 @@ body, html {
     padding: 10px;
 }
 
-.modal-project-media img {
+.modal-project-media img,
+.modal-project-media video {
     display: block;
     height: auto;
     max-height: min(46vh, 390px);
     object-fit: contain;
     width: 100%;
 }
+
+.modal-project-media[hidden],
+.modal-project-media [hidden],
+.project-gallery-controls[hidden] { display: none; }
+
+.project-gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: -8px 0 22px;
+}
+
+.project-gallery-controls p { color: #b0b0b0; font-size: 0.8rem; text-align: center; }
+.project-gallery-controls button {
+    background: #16172b;
+    border: 1px solid #66ccff;
+    border-radius: 6px;
+    color: #66ccff;
+    cursor: pointer;
+    padding: 10px;
+    flex-shrink: 0;
+}
+.project-gallery-controls button:focus-visible { outline: 3px solid #00c3ff; outline-offset: 3px; }
 
 .before-after {
     --split: 50%;
